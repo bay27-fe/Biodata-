@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bayu Febrian - Biodata</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+  html, body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0d0d0d;
+    color: #f0f0f0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+  }
+  .intro {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  .profile-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid #ffcc00;
+    box-shadow: 0 0 30px #ffcc00;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    transform: translateY(-150vh);
+    animation: fallDown 2s ease forwards;
+  }
+  @keyframes fallDown {
+    0% {
+      transform: translateY(-150vh) rotate(0deg);
+      opacity: 0;
+    }
+    70% {
+      transform: translateY(20px) rotate(0deg);
+      opacity: 1;
+    }
+    90% {
+      transform: translateY(-10px) rotate(0deg);
+    }
+    100% {
+      transform: translateY(0) rotate(0deg);
+    }
+  }
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+  }
+  h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #cccccc;
+    margin-top: 0.5rem;
+  }
+  p.intro-text {
+    margin-top: 1rem;
+    color: #aaa;
+    max-width: 450px;
+  }
+  .enter-btn {
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: #ffcc00;
+    color: #0d0d0d;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .enter-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ffcc00;
+  }
+  #biodata {
+    max-width: 650px;
+    margin: 3rem auto;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    border: 1px solid #333;
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.2);
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    display: none;
+  }
+  #biodata.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    display: block;
+  }
+  .section {
+    margin-bottom: 2rem;
+    text-align: left;
+    color: #eee;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .section h3 {
+    color: #ffcc00;
+    margin-bottom: 0.5rem;
+    position: relative;
+  }
+  .section h3::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: #ffcc00;
+    margin-top: 4px;
+  }
+  .section p, .section a {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #ddd;
+    text-decoration: none;
+  }
+  .section a:hover {
+    color: #ffcc00;
+  }
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container intro" id="intro">
+    <img src="https://i.imgur.com/Y6AjBmh.jpeg" alt="Foto Bayu Febrian" class="profile-image" />
+    <h1>Bayu Febrian</h1>
+    <h2>Web Developer</h2>
+    <p class="intro-text">Selamat datang di website pribadi saya.</p>
+    <button class="enter-btn" id="enterBtn">Masuk ke Biodata</button>
+  </div>
+
+  <div id="biodata" aria-hidden="true">
+    <div class="section">
+      <h3>Tempat, Tanggal Lahir</h3>
+      <p>Pekanbaru, 07 Februari 2001</p>
+    </div>
+    <div class="section">
+      <h3>Alamat</h3>
+      <p>Jl. Utama Gg. Nurulhaq</p>
+    </div>
+    <div class="section">
+      <h3>Pendidikan</h3>
+      <p>SDN 06 Pekanbaru (2013)</p>
+      <p>SMPN 15 Pekanbaru (2016)</p>
+      <p>SMKN 05 Pekanbaru (2019)</p>
+    </div>
+    <div class="section">
+      <h3>Pengalaman Kerja</h3>
+      <p>Pizza Hut Delivery</p>
+      <p>PT. KB Finansia Multi Finance</p>
+    </div>
+    <div class="section">
+      <h3>Tentang Saya</h3>
+      <p>Nama saya Bayu Febrian, atau dikenal sebagai Bayu. Tempat kelahiran saya adalah kota Pekanbaru yang terletak di Riau pada tanggal 07 Februari 2001.</p>
+      <p>Sejak masa kanak-kanak, saya selalu memiliki aspirasi yang tinggi. Meski hidup dalam kondisi yang sederhana, orang tua saya selalu mendorong saya untuk berani meraih mimpi dan bekerja keras untuk mewujudkannya.</p>
+      <p>Masa kanak-kanak saya diisi dengan bermain di dekat rumah dan berkeliling perumahan dengan sepeda bersama teman-teman saya.</p>
+      <p>Setelah menyelesaikan pendidikan menengah, saya berusaha keras untuk mendapatkan pekerjaan yang layak supaya bisa membanggakan kedua orang tua saya.</p>
+    </div>
+    <div class="section">
+      <h3>Sosial Media</h3>
+      <p>Instagram: <a href="https://instagram.com/bafe_07" target="_blank">@bafe_07</a></p>
+      <p>Facebook: <a href="https://facebook.com/bayu.febrian" target="_blank">bayu febrian</a></p>
+      <p>TikTok: <a href="https://tiktok.com/@kepoluu.07" target="_blank">@kepoluu.07</a></p>
+    </div>
+    <div class="section">
+      <h3>Kontak</h3>
+      <p>Email: <a href="mailto:bayufebrian2001@gmail.com">bayufebrian2001@gmail.com</a></p>
+      <p>No. HP: 087792704663</p>
+    </div>
+  </div>
+
+<script>
+  const enterBtn = document.getElementById('enterBtn');
+  const biodata = document.getElementById('biodata');
+
+  enterBtn.addEventListener('click', () => {
+    biodata.classList.add('visible');
+    biodata.setAttribute('aria-hidden', 'false');
+    biodata.scrollIntoView({ behavior: 'smooth' });
+
+    const sections = biodata.querySelectorAll('.section');
+    sections.forEach((section, i) => {
+      setTimeout(() => {
+        section.classList.add('visible');
+      }, i * 300);
+    });
+  });
+</script>
+</body>
+</html>
